@@ -1,0 +1,22 @@
+.dashboard1 {
+  width: 400px;
+  position: fixed;
+  margin-left: 0px;
+  background-color: #ccc;
+  padding: 20px;
+  top: 25px;
+  border-radius: 0 1em 1em 0;
+  overflow: auto;
+}
+
+.dashboard2 {
+  width: 400px;
+  position: fixed;
+  right:0px;
+  margin-right: 0px;
+  background-color: #ccc;
+  padding: 20px;
+  top: 100px;
+  border-radius: 1em 0 0 1em;
+  overflow: auto;
+}
