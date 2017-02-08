@@ -41,42 +41,54 @@ $links = [
   </style>
 </head>
 <body>
+    <div class="ui grid" style=" background-color: yellow ">
+  <div class="eight wide column"></div>
+  <div class="eight wide column"></div>
+  <div class="ten wide column"></div>
+  <div class="six wide column"></div>
+  <div class="four wide column"></div>
+  <div class="twelve wide column"></div>
+  <div class="two wide column"></div>
+  <div class="fourteen wide column"></div>
+  <div class="sixteen wide column"></div>
+</div>
+    
 <div style="height: 100%; margin-top: -75px" class="ui middle aligned grid ">
-  <div class="column">
-    <div style="position: relative; top: 75px; z-index: 1" class="ui fluid centered small circular image">
-      <img src="<?php echo $image; ?>">
-    </div>
-    <div style="max-width: 500px; padding-top: 75px; margin-top: 0px" class="ui fluid centered card">
-      <div class="center aligned content">
-        <span class="header"><?php echo $name; ?></span>
-        <div class="meta">
-          <span class="date"><?php echo $subtitle; ?></span>
-        </div>
-        <div class="center aligned extra content social">
-			<?php
-			foreach ($social as $key => $value) {
-				echo '<a href="'. $value .'"> <i class="big '. $key .' icon icon-color"></i> </a>';
-			}
-			?>
-	    </div>
-	    <div class="center aligned content skills">
-		    <?php
-			foreach ($skills as $value) {
-				echo '<button class="ui basic button">' . $value . '</button>';
-			}
-			?>
-	    </div>
-        <div class="left aligned description">
-			<?php echo $description; ?>
-        </div>
-        <div class="center aligned content links">
-			<?php
-			foreach ($links as $key => $value) {
-				echo '<a href="'. $value .'"><button class="ui basic button">'. $key .'</button></a>';
-			}
-			?>
-	    </div>
-      </div>
+              <div class="column">
+                <div style="position: relative; top: 75px; z-index: 1" class="ui fluid centered small circular image">
+                  <img src="<?php echo $image; ?>">
+                </div>
+                <div style="max-width: 500px; padding-top: 75px; margin-top: 0px" class="ui fluid centered card">
+                  <div class="center aligned content">
+                    <span class="header"><?php echo $name; ?></span>
+                    <div class="meta">
+                      <span class="date"><?php echo $subtitle; ?></span>
+                    </div>
+                    <div class="center aligned extra content social">
+            			<?php
+            			foreach ($social as $key => $value) {
+            				echo '<a href="'. $value .'"> <i class="big '. $key .' icon icon-color"></i> </a>';
+            			}
+            			?>
+            	    </div>
+            	    <div class="center aligned content skills">
+            		    <?php
+            			foreach ($skills as $value) {
+            				echo '<button class="ui basic button">' . $value . '</button>';
+            			}
+            			?>
+            	    </div>
+                    <div class="left aligned description">
+            			<?php echo $description; ?>
+                    </div>
+                    <div class="center aligned content links">
+            			<?php
+            			foreach ($links as $key => $value) {
+            				echo '<a href="'. $value .'"><button class="ui basic button">'. $key .'</button></a>';
+            			}
+            			?>
+            	    </div>
+                  </div>
     </div>
   </div>
 </div>
