@@ -2,8 +2,7 @@
 
 $pageTitle = 'Test Page';
 $style = '';
-$image = '../images/amy2.jpeg';
-$stackupicon = '../images/icon.png';
+$image = 'images/amy2.jpeg';
 $name = 'Amy Takayesu';
 $subtitle = 'Graduate Student';
 $description = 'I am studying for a Masters in Computer Science at the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2017.';
@@ -32,24 +31,21 @@ $links = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="mobile-web-app-capable" content="yes">
   <title><?php echo $pageTitle; ?></title>
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/javaforsearch.js"></script>
-  <script src="../css/semantic-ui/semantic.min.js"></script>
-  <link rel="stylesheet" href="../css/semantic-ui/semantic.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="css/semantic-ui/semantic.min.js"></script>
+  <link rel="stylesheet" href="css/semantic-ui/semantic.min.css">
 
-  <link rel="stylesheet" type="text/css" href="../css/stylesheet-default.css">
-  <link rel="stylesheet" type="text/css" href="../css/print-default.css" media="print">
+  <link rel="stylesheet" type="text/css" href="css/stylesheet-default.css">
+  <link rel="stylesheet" type="text/css" href="css/print-default.css" media="print">
 	
-  <style type="text/css">
-	  <?php echo $style; ?>
-  </style>
+  <link rel="stylesheet" type="text/css" href="css/directory.css">
 </head>
 <body>
 <!-- Website Header --> 
 <div> 
     
     <ul class="topnav" id="myTopnav">
-    <li><a href="#home">  <img src="<?php echo $stackupicon; ?>" style="width:39px;height:57px"> </a></li>
+    <li><a href="#home">  <img src="images/icon.png" style="width:39px;height:57px"> </a></li>
     <li><a class="title">StackUP: Tech Talent Directory</a></li>
     
 </ul>
@@ -317,7 +313,12 @@ $links = [
   </div> 
  
     
- </div>     
+ </div>
+ <script type="text/javascript">
+ $('ui.fluid.search.selection.dropdown')
+  .dropdown()
+;
+ </script>
 </body>
 <AutoScroll></AutoScroll>
 </html>
