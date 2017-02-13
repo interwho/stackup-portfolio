@@ -193,5 +193,5 @@ function getAllPortfolios($connection)
 
 function translateRelativeLinksUp($link)
 {
-    return ltrim($link, '../');
+    return ltrim($link, '\.\./');
 }

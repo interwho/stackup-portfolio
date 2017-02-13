@@ -70,15 +70,19 @@ $profiles = getAllPortfolios($connection);
                     </div>
                     <div class="center aligned extra content social">
                         <?php
-                        foreach ($social as $key => $value) {
-                            echo '<a href="' . $value . '"> <i class="big ' . $key . ' icon icon-color"></i> </a>';
+                        if (is_array($social)) {
+                            foreach ($social as $key => $value) {
+                                echo '<a href="' . $value . '"> <i class="big ' . $key . ' icon icon-color"></i> </a>';
+                            }
                         }
                         ?>
                     </div>
                     <div class="center aligned content skills">
                         <?php
-                        foreach ($skills as $value) {
-                            echo '<button class="ui basic button">' . $value . '</button>';
+                        if (is_array($skills)) {
+                            foreach ($skills as $value) {
+                                echo '<button class="ui basic button">' . $value . '</button>';
+                            }
                         }
                         ?>
                     </div>
@@ -87,8 +91,10 @@ $profiles = getAllPortfolios($connection);
                     </div>
                     <div class="center aligned content links">
                         <?php
-                        foreach ($links as $key => $value) {
-                            echo '<a href="' . $value . '"><button class="ui basic button">' . $key . '</button></a>';
+                        if (is_array($links)) {
+                            foreach ($links as $key => $value) {
+                                echo '<a href="' . $value . '"><button class="ui basic button">' . $key . '</button></a>';
+                            }
                         }
                         ?>
                     </div>
