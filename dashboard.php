@@ -84,9 +84,9 @@ $image = translateRelativeLinksUp($profile['image']);
 $name = $profile['name'];
 $subtitle = $profile['subtitle'];
 $description = $profile['description'];
-$social = json_decode($profile['social']);
+$social = json_decode($profile['social'], true);
 $skills = json_decode($profile['skills']);
-$links = json_decode($profile['links']);
+$links = json_decode($profile['links'], true);
 ?>
 <!DOCTYPE html>
 <html>
@@ -119,12 +119,12 @@ $links = json_decode($profile['links']);
                 <div class="ui form">
                     <div class="field">
                         <label>Name: </label>
-                        <input name="name" type="text" placeholder="Your Name (required)">
+                        <input name="name" type="text" placeholder="Your Name (required)" value="<?php echo $name; ?>">
                     </div>
 
                     <div class="field">
                         <label>Subheading: </label>
-                        <input name="subtitle" type="text" placeholder="Your Subheading (required)">
+                        <input name="subtitle" type="text" placeholder="Your Subheading (required)" value="<?php echo $subtitle; ?>">
                     </div>
 
                     <div class="field">
@@ -134,12 +134,12 @@ $links = json_decode($profile['links']);
                         <div class="ui label">
                             http://
                         </div>
-                        <input name="image" type="text" placeholder="imgur.com/your_picture.jpeg">
+                        <input name="image" type="text" placeholder="imgur.com/your_picture.jpeg" value="<?php if (substr($image, 0, 1) != 'i') { echo ltrim($image, 'http://'); } ?>">
                     </div>
 
                     <div class="field">
                         <label>Summary</label>
-                        <textarea name="summary" rows="2" placeholder="Your Summary (required)"></textarea>
+                        <textarea name="summary" rows="2" placeholder="Your Summary (required)"><?php echo $description; ?></textarea>
                     </div>
 
                     <div class="field">
@@ -429,7 +429,7 @@ $links = json_decode($profile['links']);
             <div class="ui form">
                 <div class="field">
                     <label>Custom CSS</label>
-                    <textarea name="css" rows="2" placeholder="Your CSS"></textarea>
+                    <textarea name="css" rows="2" placeholder="Your CSS"><?php echo $style; ?></textarea>
                 </div>
 
                 <div class="field">

@@ -14,9 +14,9 @@ $image = $profile['image'];
 $name = $profile['name'];
 $subtitle = $profile['subtitle'];
 $description = $profile['description'];
-$social = json_decode($profile['social']);
+$social = json_decode($profile['social'], true);
 $skills = json_decode($profile['skills']);
-$links = json_decode($profile['links']);
+$links = json_decode($profile['links'], true);
 ?>
 <!DOCTYPE html>
 <html>

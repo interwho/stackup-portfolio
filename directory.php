@@ -54,9 +54,9 @@ $profiles = getAllPortfolios($connection);
         $name = $profile['name'];
         $subtitle = $profile['subtitle'];
         $description = $profile['description'];
-        $social = json_decode($profile['social']);
+        $social = json_decode($profile['social'], true);
         $skills = json_decode($profile['skills']);
-        $links = json_decode($profile['links']);
+        $links = json_decode($profile['links'], true);
         ?>
         <div class="box">
             <div style="position: relative; top: 75px; z-index: 1" class="ui fluid centered small circular image">
