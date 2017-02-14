@@ -50,7 +50,7 @@ $profiles = getAllPortfolios($connection);
 <div id="content">
     <?php
     foreach ($profiles as $profile) {
-        $image = $profile['image'];
+        $image = translateRelativeLinksUp($profile['image']);
         $name = $profile['name'];
         $subtitle = $profile['subtitle'];
         $description = $profile['description'];
