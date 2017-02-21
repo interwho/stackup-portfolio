@@ -191,6 +191,19 @@ function getAllPortfolios($connection)
     return $rows;
 }
 
+function getPossibleSkills($connection)
+{
+    $query = "SELECT * FROM `skills` LIMIT 0, 1000";
+    $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+
+    $rows = [];
+    while ($row = $result->fetch_array()) {
+        $rows[] = $row['skill'];
+    }
+
+    return $rows;
+}
+
 function translateRelativeLinksUp($link)
 {
     return ltrim($link, '\.\./');
