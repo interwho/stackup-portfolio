@@ -7,7 +7,7 @@ $INVITE_CODE = 'stackup';
 // Database Configuration
 $DB_HOST = 'localhost';
 $DB_USERNAME = 'root';
-$DB_PASSWORD = '8ptd7d';
+$DB_PASSWORD = 'password';
 $DB_NAME = 'portfolios';
 
 // Error Constants
