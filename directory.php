@@ -47,7 +47,8 @@ $profiles = getAllPortfolios($connection);
 </div>
 -->
 
-<div id="content">
+    <div id="content">
+        <div class="ui grid">
     <?php
     foreach ($profiles as $profile) {
         $image = translateRelativeLinksUp($profile['image']);
@@ -58,11 +59,12 @@ $profiles = getAllPortfolios($connection);
         $skills = json_decode($profile['skills']);
         $links = json_decode($profile['links'], true);
         ?>
-        <div class="box">
+
+            <div class ="five wide column">
             <div style="position: relative; top: 75px; z-index: 1" class="ui fluid centered small circular image">
                 <img src="<?php echo $image; ?>">
             </div>
-            <div style="max-width: 500px; padding-top: 75px; margin-top: 0px" class="ui fluid centered card">
+            <div class="ui fluid centered card" style="margin-top: 20px; padding-top: 50px">
                 <div class="center aligned content">
                     <span class="header"><?php echo $name; ?></span>
                     <div class="meta">
@@ -82,11 +84,12 @@ $profiles = getAllPortfolios($connection);
                         if (is_array($skills)) {
                             foreach ($skills as $value) {
                                 echo '<button class="ui basic button">' . $value . '</button>';
+                                echo '<button class="ui basic button">' . $value . '</button>';
                             }
                         }
                         ?>
                     </div>
-                    <div class="left aligned description">
+                    <div class="center aligned description" style="word-wrap: break-word;   ">
                         <?php echo $description; ?>
                     </div>
                     <div class="center aligned content links">
@@ -99,9 +102,11 @@ $profiles = getAllPortfolios($connection);
                         ?>
                     </div>
                 </div>
+                </div>
             </div>
-        </div>
+
     <?php } ?>
+        </div>
 </div>
 </body>
 <AutoScroll></AutoScroll>
